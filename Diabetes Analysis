@@ -1,0 +1,33 @@
+ Diabetes Risk Factors: Exploratory Data Analysis
+
+Exploratory analysis of the Pima Indians Diabetes dataset: 768 women aged 21+, eight clinical predictors and a binary diabetes outcome.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/Diabetes_EDA.ipynb)
+
+## Questions
+1. How does diabetes prevalence vary by age and BMI?
+2. Which clinical measures are most strongly associated with diabetes?
+
+## Approach
+- Identified and handled **hidden missing values** (zeros recorded for glucose, blood pressure, skin thickness, insulin and BMI)
+- Calculated prevalence by BMI category and age group
+- Compared glucose distributions by outcome
+- Examined correlations with the outcome
+
+## Key findings
+- Glucose is the variable most strongly associated with diabetes, followed by BMI, age and pregnancies.
+- Blood pressure and skin thickness show weak associations.
+- Older age groups have small samples, so their estimates are unstable.
+
+## Limitations
+Cross-sectional data from one population (women of Pima heritage), so associations cannot be read as causal or generalised. Median imputation reduces the apparent signal in insulin and skin thickness.
+
+## Run it
+```bash
+pip install -r requirements.txt
+jupyter notebook Diabetes_EDA.ipynb
+```
+Download `diabetes.csv` from [Kaggle](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database) and place it in the project folder.
+
+## Data source
+National Institute of Diabetes and Digestive and Kidney Diseases, via UCI / Kaggle.
